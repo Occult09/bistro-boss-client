@@ -1,20 +1,19 @@
-import React from 'react';
-
 const FoorCard = ({ item }) => {
     const { name, recipe, image, price } = item
     
     return (
-        <div className="card bg-base-100 w-96 shadow-sm">
+        <div className="card bg-base-100 shadow-sm">
             <figure>
                 <img
-                    src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                    alt="Shoes" />
+                    src={image}
+                    alt="Foods" />
             </figure>
+            <p className="bg-slate-900 absolute right-0 mr-3 mt-3 p-1">${price}</p>
             <div className="card-body">
-                <h2 className="card-title">Card Title</h2>
-                <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
+                <h2 className="card-title">{name}</h2>
+                <p>{recipe}</p>
                 <div className="card-actions justify-end">
-                    <button className="btn btn-primary">Buy Now</button>
+                    <button className="btn btn-primary">Add to Cart</button>
                 </div>
             </div>
         </div>
